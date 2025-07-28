@@ -326,7 +326,6 @@ export const usePuterStore = create<PuterStore>((set, get) => {
             AIResponse | undefined
         >;
     };
-
     const feedback = async (path: string, message: string) => {
         const puter = getPuter();
         if (!puter) {
@@ -350,7 +349,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
                     ],
                 },
             ],
-            { model: "claude-sonnet-4" }
+            { model: "claude-3-7-sonnet" }
         ) as Promise<AIResponse | undefined>;
     };
 
